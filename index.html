@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.8">
+		<script type="text/javascript" src="Data/data.json"></script>
+	<head>
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+		<body>
+			<header class="header">
+				<h2>web-audio-big-gun</h2>
+				<h2>- don't watch, just hear -</h2>
+			</header>
+				<div class="cont">
+					<div id="app">
+						<div class="spinner" v-if="!isLoaded">Loading...</div>
+						<comp-a class="comp" v-for="(item, index) in mydata" :cassete="item.img" :index="index"></comp-a>
+					</div>
+				</div>
+			<footer></footer>
+		</body>
+	<link rel="stylesheet" type="text/css" href="Styles/style.css">	
+	<script type="text/javascript" src="Source/comp.js"></script>
+	<script type="text/javascript" src="Source/main.js"></script>
+</html>
